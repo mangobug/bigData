@@ -1,0 +1,4 @@
+SELECT afs."Follower", ss."Seed2"
+  FROM "Active-Follower-Seed" as afs, "SimilarSeeds" as ss
+WHERE afs."Seed"=ss."Seed1"
+  ;
