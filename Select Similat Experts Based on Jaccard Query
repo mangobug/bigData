@@ -1,0 +1,4 @@
+SELECT "Seed1", seed2, jaccard
+  FROM "Jaccard-Seeds"
+WHERE jaccard>0.03
+  ;
