@@ -1,0 +1,4 @@
+SELECT distinct("Seed"), count("Follower")
+  FROM "Active-Seed-Follower"
+	GROUP BY "Seed"
+  ;
