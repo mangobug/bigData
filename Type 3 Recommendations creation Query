@@ -1,0 +1,5 @@
+SELECT sf."follower1", afs."Seed"
+  FROM "Active-Follower-Seed" as afs, "SimilarFollowers" as sf
+WHERE (sf."follower2"=afs."Follower")
+GROUP BY sf."follower1", afs."Seed"
+  ;
