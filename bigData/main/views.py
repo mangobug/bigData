@@ -8,7 +8,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from bigData.main.models import User, Tweet
+from bigData.main.models import DataUser, Tweet
 
 def index(request, template_name):
     """
