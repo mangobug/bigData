@@ -1,0 +1,10 @@
+SELECT
+"SeedUser",
+"FollowerID",
+count("TweetText") as TotalTweetsCount,
+sum(CASE WHEN "TweetText" LIKE '%$%' THEN 1 ELSE 0 END) AS StockRelatedTweetCount,
+sum(CASE WHEN "TweetText" LIKE '%$%' THEN 1 ELSE 0 END) / count("TweetText")::float as percentage 
+FROM "Tweet"
+GROUP BY "FollowerID", "SeedUser"
+HAVING (sum(CASE WHEN "TweetText" LIKE '%$%' THEN 1 ELSE 0 END) / count("TweetText")::float >05)
+;
